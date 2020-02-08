@@ -6,8 +6,17 @@
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 
-;; Setup the backup directory for current use
-(setq backup-directory-alist '(("." . "~/.emacs_backups")))
+;; Setting up backup directory for the every files
+;; (setq backup-directory-alist '(("." . "~/.emacs_backups")))
+(setq backup-by-copying t
+      backup-directory-alist '(("." . "~/.emacs-backups/"))
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)       ; use versioned backups
+(setq auto-save-file-name-transforms
+      `((".*" "~/.emacs_backups/" t)))
+
 
 (require 'package)
 (setq package-enable-at-startup nil)
