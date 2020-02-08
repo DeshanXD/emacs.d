@@ -4,6 +4,7 @@
 ;; Make emacs cleaner without nav bars and scroll bars
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+(scroll-bar-mode -1)s
 (toggle-scroll-bar -1)
 
 ;; Setting up backup directory for the every files
